@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#020617;
+  color:white;
+  cursor:none;
+}
+
+/* PARTICLES */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* CURSOR */
+.cursor{
+  width:20px;
+  height:20px;
+  border:2px solid #38bdf8;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  z-index:1000;
+  box-shadow:0 0 20px #38bdf8;
+}
+
+/* TRAIL */
+.trail{
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.8;
+  box-shadow: 0 0 10px #38bdf8;
+  transition: transform 0.2s, opacity 0.5s;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-top:80px;
+}
+
+.title h1{
+  color:#38bdf8;
+}
+
+/* PROJECT GRID */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  padding:50px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #38bdf8;
+}
+
+/* TECH */
+.tech{
+  font-size:14px;
+  color:#94a3b8;
+  margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  padding:8px 15px;
+  background:#38bdf8;
+  color:black;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.btn-outline{
+  padding:8px 15px;
+  border:1px solid #38bdf8;
+  border-radius:20px;
+  color:#38bdf8;
+  text-decoration:none;
+}
+
+.btn:hover{
+  box-shadow:0 0 15px #38bdf8;
+}
+/* PROJECT IMAGE */
+.project-img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+.card:hover .project-img{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#020617;
+  margin-top:50px;
+}
+
+/* NAME */
+.footer h3{
+  color:#38bdf8;
+}
+/* TEXT */
+.footer p{
+  color:#94a3b8;
+  margin:10px 0;
+}
+
+/* SOCIAL LINKS */
+.socials{
+  margin:15px 0;
+}
+
+.socials a{
+  margin:0 10px;
+  color:#38bdf8;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  text-shadow:0 0 10px #38bdf8;
+}
+
+/* COPYRIGHT */
+.copy{
+  font-size:14px;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+<div class="cursor"></div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="title">
+  <h1>My Projects</h1>
+</div>
+
+<section class="projects">
+
+  <div class="card">
+
+<div class="img-box"></div>
+  <img src="images/login.png" class="project-img">
+
+  <div class="overlay">
+    <a href="#" class="btn">Live</a>
+    <a href="https://github.com/Farhatraje" class="btn-outline">GitHub</a>
+  </div>
+</div>
+
+  <h3>Login System</h3>
+  <p>Developed a user authentication system with login and signup functionality using HTML, CSS, and 
+JavaScript, enabling users to securely create accounts and access protected content</p>
+  <p class="tech">HTML • CSS • JavaScript</p>
+  </div>
+  
+  <div class="card">
+
+    
+<div class="img-box"></div>
+  <img src="images/ayra.png" class="project-img">
+
+  <div class="overlay">
+    <a href="#" class="btn">Live</a>
+    <a href="https://github.com/Farhatraje" class="btn-outline">GitHub</a>
+  </div>
+</div>
+  <h3>Ayra Infinity Academy – E-Learning Platform (In Progress)</h3>
+  <p>Developing a full-stack e-learning website with secure login/signup system, course enrollment, module
+based learning, quizzes, and automated certificate generation. Focused on responsive UI and user
+friendly experience </p>
+  <p class="tech">HTML • CSS • JavaScript • Backend</p>
+
+</div>
+
+  <div class="card">
+
+
+<div class="img-box"></div>
+     <img src="images/port.png" class="project-img">
+
+     <div class="overlay">
+    <a href="https://farhatraje.github.io/Portfolio/" class="btn">Live</a>
+    <a href="https://github.com/Farhatraje" class="btn-outline">GitHub</a>
+  </div>
+</div>
+
+    <h3>Portfolio Website</h3>
+    <p>A personal portfolio showcasing my projects, skills, and experience in web development. It highlights 
+my ability to build responsive websites using modern technologies and demonstrates my problem
+solving and design capabilities.</p>
+    <p class="tech">HTML • CSS • JavaScript </p>
+
+  
+  </div>
+
+  <div class="card">
+
+    
+<div class="img-box"></div>
+     <img src="images/.png" class="project-img">
+
+     <div class="overlay">
+    <a href="#" class="btn">Live</a>
+    <a href="https://github.com/Farhatraje" class="btn-outline">GitHub</a>
+  </div>
+</div>
+
+    <h3>Construction Estimator</h3>
+    <p>Developed a simple tool to calculate the total estimated cost of construction materials based on user 
+input. The project aimed to help users get a quick cost estimate by entering required quantities and 
+prices of construction products.</p>
+    <p class="tech">HTML • CSS • JavaScript</p>
+
+  
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+// PARTICLES
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 1 },
+    line_linked: { enable: true }
+  }
+});
+
+// CURSOR + TRAIL
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+
+  const trail = document.createElement("div");
+  trail.className = "trail";
+  document.body.appendChild(trail);
+
+  trail.style.left = e.clientX + "px";
+  trail.style.top = e.clientY + "px";
+
+  setTimeout(() => {
+    trail.style.transform = "scale(0)";
+    trail.style.opacity = "0";
+  }, 10);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 300);
+});
+</script>
+<footer class="footer">
+
+  <h3>Farhat Raje</h3>
+  <p>Building modern web applications 🚀</p>
+
+  <div class="socials">
+    <a href="https://github.com/Farhatraje" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/farhat-raje-3661b9273/" target="_blank">LinkedIn</a>
+    <a href="https://mail.google.com/mail/?view=cm&to=farhatkhanraje@gmail.com&su=Contact%20from%20Portfolio&body=Hello%20Farhat,%0AI%20want%20to%20connect%20with%20you." target="_blank">
+
+    Email Me
+</a>
+
+  </div>
+
+  <p class="copy">© 2026 Farhat Raje | All Rights Reserved</p>
+
+</footer>
+</body>
+</html>
