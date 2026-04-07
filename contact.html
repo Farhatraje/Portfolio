@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#020617;
+  color:white;
+  cursor:none;
+}
+
+/* PARTICLES */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* CURSOR */
+.cursor{
+  width:20px;
+  height:20px;
+  border:2px solid #38bdf8;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  z-index:1000;
+  box-shadow:0 0 20px #38bdf8;
+}
+
+/* TRAIL */
+.trail{
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.8;
+  box-shadow: 0 0 10px #38bdf8;
+  transition: transform 0.2s, opacity 0.5s;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-top:80px;
+}
+
+.title h1{
+  color:#38bdf8;
+}
+
+/* CONTACT BOX */
+.contact-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  padding:50px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:15px;
+  width:300px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 20px #38bdf8;
+}
+
+/* FORM */
+form input, form textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:none;
+  border-radius:5px;
+}
+
+textarea{
+  height:100px;
+}
+
+/* BUTTON */
+.btn{
+  padding:10px 20px;
+  background:#38bdf8;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  color:black;              /* ✅ FIX */
+  text-decoration:none;     /* ✅ REMOVE UNDERLINE */
+  display:inline-block;
+}
+
+.btn:hover{
+  box-shadow:0 0 15px #38bdf8;
+}
+
+.icon{
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{
+    text-shadow:0 0 5px #38bdf8;
+  }
+  to{
+    text-shadow:0 0 20px #38bdf8;
+  }
+}
+
+.card:hover .icon{
+  transform:scale(1.2);
+  transition:0.3s;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:55px;
+  height:55px;
+  background:#38bdf8;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:24px;
+  text-decoration:none;
+  z-index:1000;
+  box-shadow:0 0 20px #38bdf8;
+  animation:pulse 2s infinite;
+  transition:0.3s;
+}
+
+/* HOVER */
+.whatsapp:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 30px #38bdf8;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse{
+  0%{
+    box-shadow:0 0 0 0 #38bdf8;
+  }
+  70%{
+    box-shadow:0 0 0 15px rgba(37,211,102,0);
+  }
+  100%{
+    box-shadow:0 0 0 0 rgba(37,211,102,0);
+  }
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#020617;
+  margin-top:50px;
+}
+
+/* NAME */
+.footer h3{
+  color:#38bdf8;
+}
+/* TEXT */
+.footer p{
+  color:#94a3b8;
+  margin:10px 0;
+}
+
+/* SOCIAL LINKS */
+.socials{
+  margin:15px 0;
+}
+
+.socials a{
+  margin:0 10px;
+  color:#38bdf8;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  text-shadow:0 0 10px #38bdf8;
+}
+
+/* COPYRIGHT */
+.copy{
+  font-size:14px;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+<div class="cursor"></div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="title">
+  <h1>Contact Me</h1>
+  <p style="color:#94a3b8;">Let’s connect and build something amazing 🚀</p>
+</div>
+
+<section class="contact-container">
+
+  <!-- CONTACT INFO -->
+  <div class="card">
+  <i class="fas fa-envelope icon"></i>
+  <h3>Email</h3>
+  <p>farhatkhanraje@gmail.com</p>
+
+  <a href="https://mail.google.com/mail/?view=cm&to=farhatkhanraje@gmail.com&su=Contact%20from%20Portfolio&body=Hello%20Farhat,%0AI%20want%20to%20connect%20with%20you."
+     class="btn" target="_blank">
+    Email Me
+  </a>
+</div>
+
+  <div class="card">
+  <i class="fab fa-linkedin icon"></i>
+  <h3>LinkedIn</h3>
+
+  <a href="https://www.linkedin.com/in/farhat-raje-3661b9273/" 
+     class="btn" target="_blank">
+    Visit LinkedIn
+  </a>
+</div>
+
+<div class="card">
+  <i class="fab fa-github icon"></i>
+  <h3>GitHub</h3>
+
+  <a href="https://github.com/Farhatraje" 
+     class="btn" target="_blank">
+    View GitHub
+  </a>
+</div>
+
+  
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+// PARTICLES
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 1 },
+    line_linked: { enable: true }
+  }
+});
+
+// CURSOR + TRAIL
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+
+  const trail = document.createElement("div");
+  trail.className = "trail";
+  document.body.appendChild(trail);
+
+  trail.style.left = e.clientX + "px";
+  trail.style.top = e.clientY + "px";
+
+  setTimeout(() => {
+    trail.style.transform = "scale(0)";
+    trail.style.opacity = "0";
+  }, 10);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 300);
+});
+</script>
+<footer class="footer">
+
+  <h3>Farhat Raje</h3>
+  <p>Building modern web applications 🚀</p>
+
+  <div class="socials">
+    <a href="https://github.com/Farhatraje" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/farhat-raje-3661b9273/" target="_blank">LinkedIn</a>
+    <a href="https://mail.google.com/mail/?view=cm&to=farhatkhanraje@gmail.com&su=Contact%20from%20Portfolio&body=Hello%20Farhat,%0AI%20want%20to%20connect%20with%20you." target="_blank">
+
+    Email Me
+</a>
+
+  </div>
+
+  <p class="copy">© 2026 Farhat Raje | All Rights Reserved</p>
+
+</footer>
+<a href="https://wa.me/918624837786?text=Hello%20Farhat,%20I%20saw%20your%20portfolio"
+   class="whatsapp" target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+</html>

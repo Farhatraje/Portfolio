@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Skills</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+section{
+  padding:60px 20px;
+}
+
+body{
+  background:#020617;
+  color:white;
+  cursor:none;
+}
+
+/* PARTICLES */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.cursor{
+  width:20px;
+  height:20px;
+  border:2px solid #38bdf8;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 20px #38bdf8;
+  z-index:9999;
+}
+.trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.8;
+  box-shadow: 0 0 10px #38bdf8;
+  transition: transform 0.2s, opacity 0.5s;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-top:30px; /* adjust for navbar */
+}
+
+.title h1{
+  font-size:40px;
+  color:#38bdf8;
+}
+
+/* SKILLS GRID */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  padding:50px;
+  margin-top: 40px;
+   
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #38bdf8;
+}
+
+.card p{
+  margin-top:10px;
+  font-size:14px;
+}
+/* BAR */
+.bar{
+  background:#1e293b;
+  height:10px;
+  border-radius:10px;
+  margin:10px 0;
+  overflow:hidden;
+}
+
+.fill{
+  height:10px;
+  background:#38bdf8;
+  width:0;
+  transition:2s;
+}
+
+/* SECTION */
+h3{
+  margin-top:15px;
+}
+
+/* FADE */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#020617;
+  margin-top:50px;
+}
+
+/* NAME */
+.footer h3{
+  color:#38bdf8;
+}
+/* TEXT */
+.footer p{
+  color:#94a3b8;
+  margin:10px 0;
+}
+
+/* SOCIAL LINKS */
+.socials{
+  margin:15px 0;
+}
+
+.socials a{
+  margin:0 10px;
+  color:#38bdf8;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  text-shadow:0 0 10px #38bdf8;
+}
+
+/* COPYRIGHT */
+.copy{
+  font-size:14px;
+  margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+<div class="cursor"></div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="title">
+  <h1>My Skills</h1>
+</div>
+
+    <section class="skills">
+
+  <!-- FRONTEND -->
+  <div class="card fade">
+    <h2 style="color:#38bdf8;">Frontend</h2>
+
+    <p>
+      I have strong knowledge of frontend development and can build responsive
+      and modern user interfaces.
+    </p>
+
+    <p>HTML <span style="float:right;">90%</span></p>
+    <div class="bar"><div class="fill" data-width="90%"></div></div>
+
+    <p>CSS <span style="float:right;">85%</span></p>
+    <div class="bar"><div class="fill" data-width="85%"></div></div>
+
+    <p>JavaScript <span style="float:right;">70%</span></p>
+    <div class="bar"><div class="fill" data-width="70%"></div></div>
+
+    <p>Responsive Design <span style="float:right;">50%</span></p>
+    <div class="bar"><div class="fill" data-width="50%"></div></div>
+
+    <p>React (Basics) <span style="float:right;">60%</span></p>
+    <div class="bar"><div class="fill" data-width="60%"></div></div>
+  </div>
+
+  <!-- BACKEND -->
+  <div class="card fade">
+    <h2 style="color:#38bdf8;">Backend</h2>
+
+    <p>
+      I have basic understanding of backend development and can create simple
+      server-side applications and authentication systems.
+    </p>
+
+    <p>Node.js <span style="float:right;">50%</span></p>
+    <div class="bar"><div class="fill" data-width="50%"></div></div>
+
+    <p>MongoDB <span style="float:right;">50%</span></p>
+    <div class="bar"><div class="fill" data-width="50%"></div></div>
+
+    <p>Express.js <span style="float:right;">45%</span></p>
+    <div class="bar"><div class="fill" data-width="45%"></div></div>
+
+    <p>Authentication (Login Systems) <span style="float:right;">40%</span></p>
+    <div class="bar"><div class="fill" data-width="40%"></div></div>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="card fade">
+    <h2 style="color:#38bdf8;">Tools & Others</h2>
+
+    <p>
+      I use modern tools and best practices to build efficient and scalable
+      web applications.
+    </p>
+
+    <p>Git & GitHub <span style="float:right;">60%</span></p>
+    <div class="bar"><div class="fill" data-width="60%"></div></div>
+
+    <p>API Integration <span style="float:right;">55%</span></p>
+    <div class="bar"><div class="fill" data-width="55%"></div></div>
+
+    <p>Debugging <span style="float:right;">70%</span></p>
+    <div class="bar"><div class="fill" data-width="70%"></div></div>
+
+    <p>UI/UX Design <span style="float:right;">65%</span></p>
+    <div class="bar"><div class="fill" data-width="65%"></div></div>
+  </div>
+
+</section>
+   
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+// PARTICLES (ONLY ONCE)
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 70 },
+    size: { value: 3 },
+    move: { speed: 1 },
+    line_linked: { enable: true }
+  }
+});
+// SAME TRAIL AS ABOUT PAGE
+const cursor = document.querySelector('.cursor');
+
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+// track mouse
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  // TRAIL DOT
+  const trail = document.createElement("div");
+  trail.className = "trail";
+  document.body.appendChild(trail);
+
+  trail.style.left = mouseX + "px";
+  trail.style.top = mouseY + "px";
+
+  setTimeout(() => {
+    trail.style.transform = "scale(0)";
+    trail.style.opacity = "0";
+  }, 10);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 300);
+});
+
+// SMOOTH CURSOR (IMPORTANT)
+function animateCursor(){
+  cursorX += (mouseX - cursorX) * 0.15;
+  cursorY += (mouseY - cursorY) * 0.15;
+
+  cursor.style.left = cursorX + "px";
+  cursor.style.top = cursorY + "px";
+
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// CLICK EFFECT
+document.addEventListener("mousedown", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(0.7)";
+});
+
+document.addEventListener("mouseup", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(1)";
+});
+
+// SMOOTH CURSOR
+function animateCursor(){
+  cursorX += (mouseX - cursorX) * 0.15;
+  cursorY += (mouseY - cursorY) * 0.15;
+
+  cursor.style.left = cursorX + "px";
+  cursor.style.top = cursorY + "px";
+
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// CLICK EFFECT
+document.addEventListener("mousedown", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(0.7)";
+});
+
+document.addEventListener("mouseup", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(1)";
+});
+
+// ===== SCROLL ANIMATION =====
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+
+// ===== SKILL BAR ANIMATION =====
+const fills = document.querySelectorAll('.fill');
+
+window.addEventListener('scroll', () => {
+  fills.forEach(bar => {
+    if(bar.getBoundingClientRect().top < window.innerHeight){
+      bar.style.width = bar.dataset.width;
+    }
+  });
+});
+</script>
+<footer class="footer">
+
+  <h3>Farhat Raje</h3>
+  <p>Building modern web applications 🚀</p>
+
+  <div class="socials">
+    <a href="https://github.com/Farhatraje" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/farhat-raje-3661b9273/" target="_blank">LinkedIn</a>
+    <a href="https://mail.google.com/mail/?view=cm&to=farhatkhanraje@gmail.com&su=Contact%20from%20Portfolio&body=Hello%20Farhat,%0AI%20want%20to%20connect%20with%20you.">
+
+    Email Me
+</a>
+
+  </div>
+
+  <p class="copy">© 2026 Farhat Raje | All Rights Reserved</p>
+
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>
